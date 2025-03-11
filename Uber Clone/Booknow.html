@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Now | Uber Clone</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <div id="navbar">
+      <a class="active"  href="index.html">Home</a>
+      <a >Ride</a>
+      <a  href="earnings.html">Earnings</a>
+      <a  href="Profile.html">Profile</a>
+      <a href="Booknow.html" class="btn">Book Now</a>
+    </div>  
+    <script>
+    window.onscroll = function() {myFunction()};    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+  </header>
+
+  <section class="booking-form">
+    <h2>Book Your Ride</h2>
+    <form>
+      <div>
+        <label for="pickup">Pickup Location:</label>
+        <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location">
+      </div>
+      <div>
+        <label for="dropoff">Drop-off Location:</label>
+        <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location">
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time">
+      </div>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>@ 2023 Uber Clone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<style><!-- comment -->
+   
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url"https://img.freepik.com/free-vector/taxi-app-concept_23-2148493693.jpg?size=626&ext=jpg";
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+}
+
+#navbar {
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    #navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    #navbar a:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    #navbar a.active {
+      background-color: black;
+      color: white;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .sticky + .content {
+      padding-top: 20px;
+    }
+
+.booking-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.booking-form form div {
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+</style>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uber Clone - Profile</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <div id="navbar">
+      <a class="active"  href="index.html">Home</a>
+      <a >Ride</a>
+      <a  href="earnings.html">Earnings</a>
+      <a  href="Profile.html">Profile</a>
+      <a href="Booknow.html" class="btn">Book Now</a>
+    </div>  
+    <script>
+    window.onscroll = function() {myFunction()};    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+  </header>
+
+  <section class="profile">
+    <div class="profile-details">
+      <h2>My Profile</h2>
+      <img src="" alt="Profile Picture">
+      <h3>Ritwik Suneliya</h3>
+      <p>Ritwiksuneliya@gmail.com</p>
+    </div>
+    <div class="profile-form">
+      <h2>Edit Profile</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="Ritwik Suneliya">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="Ritwiksuneliya@gmail.com">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" value="+91-62656-72537">
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address">123 Indore Street,Indore, India</textarea>
+
+        <input type="submit" value="Save Changes" class="btn">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>@ 2023 Uber Clone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+}
+
+#navbar {
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    #navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    #navbar a:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    #navbar a.active {
+      background-color: black;
+      color: white;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .sticky + .content {
+      padding-top: 20px;
+    }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.profile-details {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.profile-details img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.profile-form {
+  flex-grow: 1;
+}
+
+.profile-form h2 {
+  margin-bottom: 20px;
+}
+
+.profile-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form label {
+  margin-bottom: 5px;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="tel"],
+.profile-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-form input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+</style>
